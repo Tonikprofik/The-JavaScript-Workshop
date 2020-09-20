@@ -1,6 +1,10 @@
+// for (let name in location) {
+// 	console.log(name, ":", location[name]);
+// };
+
 for (let name in location) {
-	console.log(name, ":", location[name]);
-};
+	console.log(name,":",location[name]);
+	};
 
 var stopWatch = {
 	elapsedTime: 0,
@@ -12,6 +16,7 @@ var stopWatch = {
 	resume: function(){console.log("resume");},
 	stop: function(){console.log("stop");}
 };
-for (const name in stopWatch) {
-	console.log(name, ":", stopWatch[name]);
+for(const name in stopWatch){
+	console.log(name,":",stopWatch[name]);
+
 };

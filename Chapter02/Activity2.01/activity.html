@@ -26,9 +26,9 @@
     </style>
 </head>
 <body>
-    <h1>To-Do List</h1>
-    <ol>
-        <li>Wash Laundry</li>
+    <h1 >To-Do List</h1>
+    <ol id="head1">
+        <li >Wash Laundry</li>
         <li>Clean Silver</li>
         <li>Write Letters</li>
         <li>Purchase Groceries</li>
@@ -37,6 +37,14 @@
     </ol>
     <script>
         // JavaScript here!
+
+        var h1 = document.getElementById('head1');
+        console.log("length be4" + h1.children.length);
+        var newh1 = document.createElement('li');
+        newh1.innerText = "Apache royal";
+        h1.appendChild(newh1);
+        h1.lastChild.style.color ="crimson";
+        console.log("after" + h1.children.length);
     </script>
 </body>
 </html>
