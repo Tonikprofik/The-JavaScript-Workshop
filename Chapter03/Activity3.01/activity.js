@@ -1,13 +1,24 @@
 // Declare and initialize the todo list array
-
+let todoArray = ['do tests','red','green','repeat'];
 // Declare and initialize variable for the todo list element
-
+let todoEle = document.getElementById('todo-list');
 // Declare and initialize variable for shuffle button element.
-
+let shufleEle = document.getElementById('shuffle-button'); 
 // Add event listener function for the shuffle button element.
-
+shufleEle.addEventListener('click', shuffleButtonClicked);
 // Function to replace an HTML DOM list li elements with array items.
+ 
+//replace element in an html list with an array
 
+
+function replaceListElements(listEle, listItems){
+	 listEle.innerHTML= "";
+	 for (let index = 0; index <= listItems.length -1; index++) {
+		 let liEle = document.createElement("li");
+		 liEle.appendChild(document.createTextNode(listItems[index]));
+		 listEle.appendChild(liEle);
+	 }
+ }
 /**
  * Shuffles array elements
  * @param {array} sourceArray - Array to be shuffled.
@@ -39,5 +50,9 @@ function getNewShuffledArray(sourceArray){
 }
 
 // Function to handle click events for the Shuffle button
+function shuffleButtonClicked(e) {
+	replaceListElements(todoEle, getNewShuffledArray(todoArray));
 
+}
 // Update the todo list view with initial list of items
+replaceListElements(todoEle,todoArray);
