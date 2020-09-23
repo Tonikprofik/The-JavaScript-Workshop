@@ -19,11 +19,7 @@ function replaceListElements(listEle, listItems){
 		 listEle.appendChild(liEle);
 	 }
  }
-/**
- * Shuffles array elements
- * @param {array} sourceArray - Array to be shuffled.
- * @return {array} - New array with shuffled items 
-*/
+
 function getNewShuffledArray(sourceArray){
 	// Make a copy of the sourceArray
 	var newArray = [].concat(sourceArray);
