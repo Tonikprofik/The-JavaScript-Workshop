@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <button id="peek">Peek..</button>
+        <h1 id="aboo" style="display: none;">... abu</h1>
+
+        <script type="text/javascript">
+        const peekAButton = $('#peek');
+        const abooHeadlin = $('#aboo');
+        peekAButton.on('click', function () {
+            abooHeadlin.fadeToggle();
+        });
+        </script>
+    </body>
+</html>
